@@ -3,7 +3,7 @@ from decimal import Decimal, InvalidOperation
 
 class SusuGroup:
     """
-    Manages a single Rotating Savings and Credit Association (Susu/ROSCA) group.
+    Manages a single Rotating Savings and Credit Association (Susu) group.
     
     Rules & Mechanics:
     - Fixed weekly contribution per member in GHS handled with exact Decimals.
@@ -29,7 +29,6 @@ class SusuGroup:
 
         self.members = []
         self.current_week = 1
-        # payments format: {week_number: {member_name: Decimal('amount_paid')}}
         self.payments = {self.current_week: {}}
         self.payout_history = []
         self.started = False
